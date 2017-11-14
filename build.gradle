@@ -1,0 +1,43 @@
+apply plugin: 'war'
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+ 
+apply from: 'gretty.plugin'
+
+sourceCompatibility = 1.8
+
+dependencies{
+
+compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.0.0.RELEASE'
+
+compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.31'
+
+compile group: 'com.zaxxer', name: 'HikariCP', version: '2.7.1'
+
+compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.2.11.Final'
+
+compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.0.0.RELEASE'
+
+compile group: 'org.springframework', name: 'spring-context', version: '5.0.1.RELEASE'
+
+
+compile group: 'org.springframework', name: 'spring-webmvc', version: '4.3.12.RELEASE'
+
+
+compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.0'
+
+compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.0'
+
+
+}
+
+
+  
+repositories {
+   mavenCentral()
+	
+}
+gretty {
+  httpPort = 8092
+}
+ 
